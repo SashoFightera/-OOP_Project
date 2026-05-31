@@ -50,6 +50,11 @@ std::shared_ptr<User> TaskManager::findUser(int id) const {
         if (u->getId() == id) return u;
     return nullptr;
 }
+std::shared_ptr<User> TaskManager::findUserByUsername(const std::string& username) const {
+    for (const auto& u : users)
+        if (u->getUsername() == username) return u;
+    return nullptr;
+}
 
 void TaskManager::listUsers() const {
     if (users.empty()) { std::cout << "  (no users)\n"; return; }

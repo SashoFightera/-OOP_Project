@@ -30,6 +30,7 @@ public:
     std::shared_ptr<User> createUser(const std::string& username,
                                      const std::string& email);
     std::shared_ptr<User> findUser(int id) const;
+    std::shared_ptr<User> findUserByUsername(const std::string& username) const;
     void listUsers() const;
 
     // Tasks
