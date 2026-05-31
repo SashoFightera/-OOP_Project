@@ -59,6 +59,8 @@ void Task::changeStatus(Status newStatus) {
         throw std::logic_error("Task is already DONE and cannot be changed.");
     if (status == Status::CANCELLED)
         throw std::logic_error("Task is CANCELLED and cannot be changed.");
+    if (status == newStatus)
+        throw std::logic_error("Task already has this status.");  
     status = newStatus;
 }
 
