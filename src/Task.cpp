@@ -69,6 +69,9 @@ void Task::assignTo(std::shared_ptr<User> user) {
 }
 
 void Task::addTag(const Tag& tag) {
+    for (const auto& t : tags)
+        if (t.getName() == tag.getName())
+            throw std::logic_error("Tag '" + tag.getName() + "' already exists.");
     tags.push_back(tag);
 }
 
