@@ -4,7 +4,10 @@
 
 Project::Project(int id, const std::string& name,
                  const std::string& description, std::time_t deadline)
-    : Entity(id), name(name), description(description), deadline(deadline) {}
+    : Entity(id), name(name), description(description), deadline(deadline) {
+         if (name.empty())
+        throw std::invalid_argument("Project name cannot be empty.");
+    }
 
 std::string Project::getName()        const { return name; }
 std::string Project::getDescription() const { return description; }
