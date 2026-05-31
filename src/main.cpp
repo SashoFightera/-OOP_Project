@@ -15,6 +15,10 @@ std::time_t parseDate(const std::string& s) {
     tm.tm_hour = 23;
     tm.tm_min  = 59;
     return std::mktime(&tm);
+     std::time_t result = std::mktime(&tm);
+    if (result == -1)
+        throw std::invalid_argument("Invalid date");
+    return result;
 }
 
 void printTasks(const std::vector<std::shared_ptr<Task>>& tasks) {
