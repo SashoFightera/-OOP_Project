@@ -23,40 +23,36 @@ void printTasks(const std::vector<std::shared_ptr<Task>>& tasks) {
 }
 
 void printMenu() {
-    std::cout << "\n"
-        << "╔══════════════════════════════════╗\n"
-        << "║         TASK MANAGER             ║\n"
-        << "╠══════════════════════════════════╣\n"
-        << "║  PROJECTS                        ║\n"
-        << "║   1. Create project              ║\n"
-        << "║   2. List all projects           ║\n"
-        << "║   3. Delete project              ║\n"
-        << "╠══════════════════════════════════╣\n"
-        << "║  TASKS                           ║\n"
-        << "║   4. Create task                 ║\n"
-        << "║   5. List tasks in project       ║\n"
-        << "║   6. Delete task                 ║\n"
-        << "║   7. Change task status          ║\n"
-        << "║   8. Assign task to user         ║\n"
-        << "║   9. Add tag to task             ║\n"
-        << "╠══════════════════════════════════╣\n"
-        << "║  FILTER & SORT                   ║\n"
-        << "║  10. Filter by status            ║\n"
-        << "║  11. Filter by priority          ║\n"
-        << "║  12. Filter by assignee          ║\n"
-        << "║  13. Filter by tag               ║\n"
-        << "║  14. Sort by due date            ║\n"
-        << "║  15. Sort by priority            ║\n"
-        << "║  16. Show overdue tasks          ║\n"
-        << "╠══════════════════════════════════╣\n"
-        << "║  OTHER                           ║\n"
-        << "║  17. Show statistics             ║\n"
-        << "║  18. Show change log             ║\n"
-        << "║  19. Create user                 ║\n"
-        << "║  20. List users                  ║\n"
-        << "║   0. Exit                        ║\n"
-        << "╚══════════════════════════════════╝\n"
-        << "Choice: ";
+    std::cout << "\n================================\n";
+    std::cout << "       TASK MANAGER MENU\n";
+    std::cout << "================================\n";
+    std::cout << "  -- PROJECTS --\n";
+    std::cout << "   1. Create project\n";
+    std::cout << "   2. List all projects\n";
+    std::cout << "   3. Delete project\n";
+    std::cout << "  -- TASKS --\n";
+    std::cout << "   4. Create task\n";
+    std::cout << "   5. List tasks in project\n";
+    std::cout << "   6. Delete task\n";
+    std::cout << "   7. Change task status\n";
+    std::cout << "   8. Assign task to user\n";
+    std::cout << "   9. Add tag to task\n";
+    std::cout << "  -- FILTER & SORT --\n";
+    std::cout << "  10. Filter by status\n";
+    std::cout << "  11. Filter by priority\n";
+    std::cout << "  12. Filter by assignee\n";
+    std::cout << "  13. Filter by tag\n";
+    std::cout << "  14. Sort by due date\n";
+    std::cout << "  15. Sort by priority\n";
+    std::cout << "  16. Show overdue tasks\n";
+    std::cout << "  -- OTHER --\n";
+    std::cout << "  17. Show statistics\n";
+    std::cout << "  18. Show change log\n";
+    std::cout << "  19. Create user\n";
+    std::cout << "  20. List users\n";
+    std::cout << "   0. Exit\n";
+    std::cout << "================================\n";
+    std::cout << "Choice: ";
 }
 
 int main() {
